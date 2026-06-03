@@ -14,6 +14,11 @@ private:
 
     string getWaktuSekarang();
     void catatLog(string kode_brg, string aksi, string detailPerubahan);
+    string formatRupiah(double nilai);
+    void simpanKeCSV();
+    bool muatDariCSV();
+    void simpanLogKeCSV(LogTransaksi logBaru);
+    bool muatLogDariCSV();
 
 public:
     SistemInventaris();
@@ -22,6 +27,8 @@ public:
     void tambahStok(string kode_barang, int jumlah_tambah);
     void hapusStok(string kode_barang, int jumlah_hapus, bool hapusPermanen);
     void updateBarang(string kode_barang, string nama_barang_baru, double harga_baru);
+    bool barangAda(string kode_barang);
+    bool kodeSudahAda(string kode_barang);
     void tampilkanSemuaBarang();
     void tampilkanLogAudit();
     void tampilkanValuasiGudang();
